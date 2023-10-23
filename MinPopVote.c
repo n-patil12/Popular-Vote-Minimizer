@@ -52,10 +52,10 @@ bool setSettings(int argc, char** argv, int* year, bool* fastMode, bool* quietMo
 //this function is setting the file name based on the year that the user gave, assuming user gave a valid year
 void inFilename(char* filename, int year) {
     //------------------------------------------------   
-    char fileFolder[100] = "data/";
+    char fileFolder[100] = "";
     char strYear[20];
     sprintf(strYear, "%d", year); //changes the year to a string
-    strcat(fileFolder, strYear);
+    strcpy(fileFolder, strYear);
     strcat(fileFolder, ".csv");
     strcpy(filename, fileFolder); //puts all concatention into the file name
     //------------------------------------------------
